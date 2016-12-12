@@ -1,0 +1,26 @@
+extends layout
+block title
+    title= title
+block content
+    
+    .left
+        .video-list
+            ul.list-group
+                each item in items
+                    li.list-group-item
+                        a(data-embed-id="#{item.snippet.resourceId.videoId}" data-title='#{item.snippet.title}')
+                            img(src='#{item.snippet.thumbnails.default.url}')
+                            p= item.snippet.title
+    .right
+        .video-wrapper
+            iframe#video-box.content(src='https://www.youtube.com/embed/#{items[0].snippet.resourceId.videoId}', frameborder="0", allowfullscreen)
+        .control-view
+            a#switch-view-mode.btn.btn-default.btn-sm.view-mode Theater Mode
+        .wrap-box
+            .info-box.hidden
+                h4.name= items[0].snippet.title
+            .desc-box
+                #title-txt.title-text: h4= items[0].snippet.title
+                #desc-txt.desc-text 
+                    p= items[0].snippet.description
+                

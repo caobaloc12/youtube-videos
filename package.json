@@ -1,0 +1,21 @@
+{
+  "name": "video-view-mode",
+  "version": "0.0.0",
+  "description": "Video view mode example like youtube (default mode, theater mode).",
+  "main": "server.js",
+  "author": "Loc Ronaldo <loccb90@gmail.com>",
+  "dependencies": {
+    "async": "~0.2.8",
+    "express": "~3.2.4",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "jade": "^1.11.0",
+    "request": "^2.79.0",
+    "serve-favicon": "^2.3.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "devDependencies": {},
+  "license": "ISC"
+}
